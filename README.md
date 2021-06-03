@@ -5,8 +5,9 @@
 ![Production Build](https://github.com/playerony/efa-companies/workflows/Build/badge.svg)
 ![Typecheck Check](https://github.com/playerony/efa-companies/workflows/Typecheck/badge.svg)
 
-EFA in the project name means used architecture pattern
-This is a simple app which is a simple version of pertfolio tracker
+EFA in the project name means used architecture pattern.
+![image](https://michalzalecki.com/posts/elegant-frontend-architecture-layers@2x.png)
+This is a simple app which is a simple version of portfolio tracker
 
 ## 📖Table of Contents
 
