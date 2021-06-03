@@ -1,0 +1,5 @@
+*.svg
+*.css
+*.json
+/storybook-static
+src/process-env.d.ts
