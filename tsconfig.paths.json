@@ -19,6 +19,18 @@
       ],
       "@infrastructure": [
         "./src/infrastructure"
+      ],
+      "@domain/*": [
+        "./src/domain/*"
+      ],
+      "@domain": [
+        "./src/domain"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@utils": [
+        "./src/utils"
       ]
     }
   }
