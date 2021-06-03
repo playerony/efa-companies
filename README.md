@@ -1,9 +1,9 @@
 # 🔥 efa-companies
 
-![Lint Check](https://github.com/playerony/users-list/workflows/Lint/badge.svg)
-![Test Check](https://github.com/playerony/users-list/workflows/Test/badge.svg)
-![Production Build](https://github.com/playerony/users-list/workflows/Build/badge.svg)
-![Typecheck Check](https://github.com/playerony/users-list/workflows/Typecheck/badge.svg)
+![Lint Check](https://github.com/playerony/efa-companies/workflows/Lint/badge.svg)
+![Test Check](https://github.com/playerony/efa-companies/workflows/Test/badge.svg)
+![Production Build](https://github.com/playerony/efa-companies/workflows/Build/badge.svg)
+![Typecheck Check](https://github.com/playerony/efa-companies/workflows/Typecheck/badge.svg)
 
 EFA in the project name means used architecture pattern
 This is a simple app which is a simple version of pertfolio tracker
