@@ -46,6 +46,7 @@
         "react/jsx-one-expression-per-line": "off",
         "react/no-this-in-sfc": "off",
         "func-names": "off",
+        "no-underscore-dangle": "off",
         "react-hooks/exhaustive-deps": "off",
         "import/no-extraneous-dependencies": "off",
         "newline-per-chained-call": "off",
