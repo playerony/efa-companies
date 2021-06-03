@@ -14,12 +14,6 @@
       "@ui": [
         "./src/ui"
       ],
-      "@infrastructure/*": [
-        "./src/infrastructure/*"
-      ],
-      "@infrastructure": [
-        "./src/infrastructure"
-      ],
       "@domain/*": [
         "./src/domain/*"
       ],
@@ -31,6 +25,12 @@
       ],
       "@utils": [
         "./src/utils"
+      ],
+      "@infrastructure/*": [
+        "./src/infrastructure/*"
+      ],
+      "@infrastructure": [
+        "./src/infrastructure"
       ]
     }
   }
