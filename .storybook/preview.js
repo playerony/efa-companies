@@ -1,4 +1,4 @@
-import { AppProvider } from '@context';
+import { AppProvider } from '@application/context';
 
 export const parameters = {
   options: {

@@ -1,19 +1,23 @@
 module.exports = {
   globals: {
-    "ts-jest": {
-      tsconfig: "./tsconfig.json",
+    'ts-jest': {
+      tsconfig: './tsconfig.json',
       diagnostics: true,
     },
   },
-  roots: ["<rootDir>/src"],
-  testMatch: [
-    "**/__tests__/**/*.+(ts|tsx|js)",
-    "**/?(*.)+(spec|test).+(ts|tsx|js)",
-  ],
-  setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
+  roots: ['<rootDir>/src'],
+  testMatch: ['**/__tests__/**/*.+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'],
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-  moduleNameMapper: {},
-  modulePathIgnorePatterns: ["node_modules"],
+  moduleNameMapper: {
+    '@ui/(.*)': '<rootDir>/src/ui/$1',
+    '@ui': '<rootDir>/src/ui',
+    '@application/(.*)': '<rootDir>/src/application/$1',
+    '@application': '<rootDir>/src/application',
+    '@infrastructure/(.*)': '<rootDir>/src/infrastructure/$1',
+    '@infrastructure': '<rootDir>/src/infrastructure',
+  },
+  modulePathIgnorePatterns: ['node_modules'],
 };
