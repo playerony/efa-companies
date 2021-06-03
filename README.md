@@ -7,7 +7,7 @@
 
 EFA in the project name means used architecture pattern.
 ![image](https://michalzalecki.com/posts/elegant-frontend-architecture-layers@2x.png)
-This is a simple app which is a simple version of portfolio tracker
+This is a simple app which is a simple version of portfolio tracker.
 
 ## 📖Table of Contents
 
