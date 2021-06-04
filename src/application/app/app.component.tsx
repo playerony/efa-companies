@@ -1,12 +1,12 @@
 import { BrowserRouter } from 'react-router-dom';
 
 import { AppProvider } from '../context';
-import { DashboardPage } from '../pages/dashboard-page/dashboard-page.component';
+import { AppRoutes } from '../routing/app-routing';
 
 export const App = (): JSX.Element => (
   <BrowserRouter>
     <AppProvider>
-      <DashboardPage />
+      <AppRoutes />
     </AppProvider>
   </BrowserRouter>
 );
