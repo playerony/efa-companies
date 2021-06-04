@@ -1,3 +1,4 @@
+import { Empty } from 'antd';
 import { useHistory } from 'react-router-dom';
 
 import { Text, Label, Button, BigHeading } from '@ui';
@@ -5,6 +6,7 @@ import { ContainerLayout } from './layout';
 
 import { useDetails } from './hooks';
 
+import S from './details.styles';
 import { DetailsProps } from './details.type';
 import { CompanyDetails } from './types/CompanyDetails';
 
@@ -27,6 +29,7 @@ export const Details = ({ symbol }: DetailsProps): JSX.Element => {
       { value: 1e9, symbol: 'billion' },
       { value: 1e12, symbol: 'trillion' },
     ];
+
     const rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
     const item = lookup
       .slice()
@@ -40,21 +43,31 @@ export const Details = ({ symbol }: DetailsProps): JSX.Element => {
     return `${(num / item.value).toFixed(digits).replace(rx, '$1')} ${item.symbol}`;
   };
 
+  const noData = !results?.Name;
+
   return (
     <ContainerLayout>
       <Button onClick={handleBackClick}>Go Back</Button>
-      <div>
-        <BigHeading>{results?.Name}</BigHeading>
-        <Label>
-          <Label strong>Address: </Label>
-          {results?.Address}
-        </Label>
-        <Label>
-          <Label strong>Market Capitalization: </Label>
-          {nFormatter(Number(results?.MarketCapitalization), 2)}
-        </Label>
-      </div>
-      <Text>{results?.Description}</Text>
+      {noData ? <Empty /> : (
+        <>
+          <S.StyledTextWrapper>
+            <BigHeading>{results?.Name}</BigHeading>
+            <Label>
+              <Label strong sameLine>
+                Address:{' '}
+              </Label>
+              {results?.Address}
+            </Label>
+            <Label>
+              <Label strong sameLine>
+                Market Capitalization:{' '}
+              </Label>
+              {nFormatter(Number(results?.MarketCapitalization), 2)}
+            </Label>
+          </S.StyledTextWrapper>
+          <Text>{results?.Description}</Text>
+        </>
+      )}
     </ContainerLayout>
   );
 };

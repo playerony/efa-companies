@@ -1,3 +1,4 @@
+import { Spin, Empty } from 'antd';
 import { useState, useEffect, Children } from 'react';
 
 import { List, Label } from '@ui';
@@ -21,20 +22,22 @@ export const CompaniesList = ({
 
   const noData = !companiesList?.length;
 
-  if (noData) {
-    return <Label>no data</Label>;
-  }
-
   return (
-    <>
-      <Label>Search Results</Label>
-      <List loading={loading}>
-        {Children.toArray(
-          companiesList.map((_companyDetails) => (
-            <CompaniesListRecord company={_companyDetails} addToPortfolio={addToPortfolio} />
-          )),
-        )}
-      </List>
-    </>
+    <Spin spinning={loading}>
+      {noData ? (
+        <Empty style={{ paddingTop: 10 }} />
+      ) : (
+        <>
+          <Label>Search Results</Label>
+          <List>
+            {Children.toArray(
+              companiesList.map((_companyDetails) => (
+                <CompaniesListRecord company={_companyDetails} addToPortfolio={addToPortfolio} />
+              )),
+            )}
+          </List>
+        </>
+      )}
+    </Spin>
   );
 };

@@ -14,6 +14,12 @@ const StyledLabel = styled.label<StyledLabelProps>`
       font-weight: ${strong === true ? theme.fontWeight.bold : theme.fontWeight.normal};
     `}
 
+  ${({ sameLine }) =>
+    sameLine &&
+    css`
+      display: contents;
+    `}
+    
   ${({ theme }) => respondTo.xmobile`
     font-size: ${theme.fontSize.xsmall};
   `}

@@ -3,6 +3,8 @@ import { PlusOutlined } from '@ant-design/icons';
 
 import { ListItem } from '@ui';
 
+import { respondTo } from '@infrastructure/styles/mixins';
+
 const StyledAddIcon = styled(PlusOutlined)`
   cursor: pointer;
   transform: scale(1);
@@ -16,6 +18,11 @@ const StyledAddIcon = styled(PlusOutlined)`
 const StyledListItem = styled(ListItem)`
   display: flex;
   padding: ${({ theme }) => `${theme.spacing.small} ${theme.spacing.medium}`};
+
+  ${({ theme }) => respondTo.mobile`
+    padding: ${theme.spacing.xsmall};
+    font-size: ${theme.fontSize.xsmall};
+  `}
 `;
 
 const S = {
