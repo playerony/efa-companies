@@ -1,10 +1,9 @@
-import { useState } from 'react';
-
 import { FlexContainerLayout } from './layout';
 import { Company, Portfolio, SearchPreview } from '@domain/dashboard';
+import { useLocalStorage } from '@utils/hooks';
 
 export const DashboardPage = (): JSX.Element => {
-  const [portfolio, setPortfolio] = useState<Company[]>([]);
+  const [portfolio, setPortfolio] = useLocalStorage<Company[]>('portfolio', []);
 
   const handleRemove = (symbol: string): void => {
     const copiedPortfolio = portfolio.slice();
