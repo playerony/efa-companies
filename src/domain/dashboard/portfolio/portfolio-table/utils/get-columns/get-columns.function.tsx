@@ -1,3 +1,4 @@
+import { MouseEvent } from 'react';
 import { TableColumnProps } from 'antd';
 
 import { Label } from '@ui';
@@ -19,13 +20,21 @@ const baseColumnsDefinitions = [
 ];
 
 export const getColumns = ({ onRemove }: Attributes): TableColumnProps<Company>[] => {
-  const handleRemoveClick = (record: Company) => () => onRemove(record.symbol);
+  const handleRemoveClick = (record: Company) => (event: MouseEvent) => {
+    event.stopPropagation();
+
+    onRemove(record.symbol);
+  };
 
   return [
     ...baseColumnsDefinitions,
     {
       title: 'Actions',
-      render: (_, record: Company) => <Label onClick={handleRemoveClick(record)}>Remove</Label>,
+      render: (_, record: Company) => (
+        <Label strong onClick={handleRemoveClick(record)} style={{ cursor: 'pointer' }}>
+          Remove
+        </Label>
+      ),
     },
   ];
 };
