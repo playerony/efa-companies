@@ -3,11 +3,14 @@ import { renderHook } from '@testing-library/react-hooks';
 
 import { useGet } from './use-get.hook';
 
+import { functionImportTest } from '@utils/tests';
 import { axiosInstance } from '@infrastructure/persistence/axios-instance';
 
 const dataMock = [{ record: 'test' }];
 
 describe('useGet Hook', () => {
+  functionImportTest(useGet);
+
   const axiosMock = new MockAdapter(axiosInstance);
 
   it('should keep results data as null until isLoading flag is set to true', async () => {

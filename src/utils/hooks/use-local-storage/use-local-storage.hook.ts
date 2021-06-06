@@ -1,18 +1,19 @@
-import { useState, Dispatch, SetStateAction } from 'react';
+import { useState } from 'react';
 
-import { tryParseJSON } from '../../functions/try-parse-json/try-parse-json.function';
+import { tryParseJSON } from '@utils/functions';
+import { storageFactory } from '@infrastructure/persistence';
 
-export const useLocalStorage = <T>(
-  key: string,
-  initialValue?: T,
-): [T, Dispatch<SetStateAction<T>>] => {
+export const useLocalStorage = <T>(key: string, initialValue?: T): [T, (value: T) => void] => {
+  const localStorageFactory = storageFactory(() => window.localStorage);
+
   const [storedValue, setStoredValue] = useState(() => {
     try {
-      const item = window.localStorage.getItem(key);
+      const item = localStorageFactory.getItem(key);
 
       return item ? tryParseJSON(item) : initialValue;
     } catch (error) {
-      // console.log(error);
+      console.log(error);
+
       return initialValue;
     }
   });
@@ -22,12 +23,11 @@ export const useLocalStorage = <T>(
       const valueToStore = value instanceof Function ? value(storedValue) : value;
 
       setStoredValue(valueToStore);
-      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+      localStorageFactory.setItem(key, JSON.stringify(valueToStore));
     } catch (error) {
-      // console.log(error);
+      console.log(error);
     }
   };
 
-  // TODO - fix any
-  return [storedValue, setValue as any];
+  return [storedValue, setValue];
 };

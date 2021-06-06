@@ -1,8 +1,11 @@
 import { renderHook } from '@testing-library/react-hooks';
 
 import { useDebounce } from './use-debounce.hook';
+import { functionImportTest } from '@utils/tests';
 
 describe('useDebounce Hook', () => {
+  functionImportTest(useDebounce);
+
   it('should return updated value after some time', async () => {
     const { result, rerender, waitFor } = renderHook((value) => useDebounce(value, 300), {
       initialProps: 'base phrase',
