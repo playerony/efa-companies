@@ -16,7 +16,7 @@ export const DashboardPage = (): JSX.Element => {
 
   const handleAdd = (company: Company): void => {
     if (!portfolio.find((_portfolioItem) => _portfolioItem.symbol === company.symbol)) {
-      setPortfolio((prevState) => [...prevState, company]);
+      setPortfolio([...portfolio, company]);
     }
   };
 
