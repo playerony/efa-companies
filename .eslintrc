@@ -27,6 +27,7 @@
         "*.js"
       ],
       "rules": {
+        "no-console": "off",
         "no-prototype-builtins": "off",
         "react/jsx-uses-react": "off",
         "react/react-in-jsx-scope": "off",
