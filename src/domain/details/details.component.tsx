@@ -48,7 +48,9 @@ export const Details = ({ symbol }: DetailsProps): JSX.Element => {
   return (
     <ContainerLayout>
       <Button onClick={handleBackClick}>Go Back</Button>
-      {noData ? <Empty /> : (
+      {noData ? (
+        <Empty />
+      ) : (
         <>
           <S.StyledTextWrapper>
             <BigHeading>{results?.Name}</BigHeading>
