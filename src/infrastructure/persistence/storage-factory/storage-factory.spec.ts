@@ -49,6 +49,7 @@ describe('storageFactory Function', () => {
       it('should reset to 0 when cleared', () => {
         storage.setItem('foo', 'Foo');
         expect(storage.length).toEqual(1);
+
         storage.clear();
         expect(storage.length).toEqual(0);
       });

@@ -1,5 +1,5 @@
 export const tryParseJSON = <T = any>(jsonString: string): T | null => {
-  if (!jsonString) {
+  if (typeof jsonString != 'string') {
     return null;
   }
 

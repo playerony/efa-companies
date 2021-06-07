@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Label } from '@ui';
+import { Label } from '@ui/parts';
 
 import { respondTo } from '@infrastructure/styles/mixins';
 
