@@ -1,11 +1,13 @@
+const TEST_KEY = '__some_random_key_you_are_not_going_to_use__';
+
 export function storageFactory(getStorage: () => Storage): Storage {
   let inMemoryStorage: { [key: string]: string } = {};
 
   function isSupported() {
     try {
-      const testKey = '__some_random_key_you_are_not_going_to_use__';
-      getStorage().setItem(testKey, testKey);
-      getStorage().removeItem(testKey);
+      getStorage().setItem(TEST_KEY, TEST_KEY);
+      getStorage().removeItem(TEST_KEY);
+
       return true;
     } catch (e) {
       return false;

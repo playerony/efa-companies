@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { PlusOutlined } from '@ant-design/icons';
 
-import { ListItem } from '@ui';
+import { ListItem } from '@ui/parts';
 
 import { respondTo } from '@infrastructure/styles/mixins';
 

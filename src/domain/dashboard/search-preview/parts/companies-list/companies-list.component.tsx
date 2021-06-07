@@ -1,7 +1,7 @@
 import { Spin, Empty } from 'antd';
 import { useState, useEffect, Children } from 'react';
 
-import { List, Label } from '@ui';
+import { List, Label } from '@ui/parts';
 import { CompaniesListRecord } from '..';
 
 import { Company } from '../../../types/Company';

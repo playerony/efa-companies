@@ -1,7 +1,7 @@
 import { MouseEvent } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { Table, Label } from '@ui';
+import { Table, Label } from '@ui/parts';
 
 import { Company } from '@domain/dashboard/types/Company';
 import { PortfolioTableProps } from './portfolio-table.types';

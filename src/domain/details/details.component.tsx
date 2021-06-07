@@ -1,7 +1,7 @@
 import { Empty } from 'antd';
 import { useHistory } from 'react-router-dom';
 
-import { Text, Label, Button, BigHeading } from '@ui';
+import { Text, Label, Button, BigHeading } from '@ui/parts';
 import { ContainerLayout } from './layout';
 
 import { useDetails } from './hooks';
