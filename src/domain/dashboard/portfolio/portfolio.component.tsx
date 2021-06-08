@@ -1,10 +1,10 @@
-import { ContainerLayout } from './layout';
+import { PaddingContainerLayout } from '@ui/layout';
 import { PortfolioTable } from './portfolio-table/portfolio-table.component';
 
 import { PortfolioProps } from './portfolio.types';
 
 export const Portfolio = (props: PortfolioProps): JSX.Element => (
-  <ContainerLayout>
+  <PaddingContainerLayout>
     <PortfolioTable {...props} />
-  </ContainerLayout>
+  </PaddingContainerLayout>
 );
