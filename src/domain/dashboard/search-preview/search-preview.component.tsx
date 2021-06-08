@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 
-import { ContainerLayout } from './layout';
+import { PaddingContainerLayout } from '@ui/layout';
 import { SearchInput, CompaniesList } from './parts';
 
 import { SearchPreviewProps } from './search-preview.types';
@@ -22,9 +22,9 @@ export const SearchPreview = ({ addToPortfolio }: SearchPreviewProps): JSX.Eleme
     setCompanyName(event.currentTarget.value);
 
   return (
-    <ContainerLayout>
+    <PaddingContainerLayout>
       <SearchInput onChange={onInputChange} />
       <CompaniesList loading={isLoading} companies={companies} addToPortfolio={addToPortfolio} />
-    </ContainerLayout>
+    </PaddingContainerLayout>
   );
 };
