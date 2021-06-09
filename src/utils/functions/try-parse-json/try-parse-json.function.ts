@@ -1,4 +1,4 @@
-export const tryParseJSON = <T = any>(jsonString: string): T | null => {
+export function tryParseJSON<T = any>(jsonString: string): T | null {
   if (typeof jsonString != 'string') {
     return null;
   }
@@ -14,4 +14,4 @@ export const tryParseJSON = <T = any>(jsonString: string): T | null => {
   }
 
   return null;
-};
+}

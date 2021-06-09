@@ -1,8 +1,8 @@
-import { Spin, Empty } from 'antd';
-import { useState, useEffect, Children } from 'react';
+import { useState, useEffect } from 'react';
 
-import { List, Label } from '@ui/parts';
 import { CompaniesListRecord } from '..';
+import { keyForEachElement } from '@utils/functions';
+import { List, Empty, Label, LoadingIndicator } from '@ui/parts';
 
 import { Company } from '../../../types/Company';
 import { CompaniesListProps } from './companies-list.type';
@@ -23,14 +23,14 @@ export const CompaniesList = ({
   const noData = !companiesList?.length;
 
   return (
-    <Spin spinning={loading}>
+    <LoadingIndicator spinning={loading}>
       {noData ? (
         <Empty style={{ paddingTop: 10 }} />
       ) : (
         <>
           <Label>Search Results</Label>
           <List>
-            {Children.toArray(
+            {keyForEachElement(
               companiesList.map((_companyDetails) => (
                 <CompaniesListRecord company={_companyDetails} addToPortfolio={addToPortfolio} />
               )),
@@ -38,6 +38,6 @@ export const CompaniesList = ({
           </List>
         </>
       )}
-    </Spin>
+    </LoadingIndicator>
   );
 };

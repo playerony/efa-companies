@@ -1,9 +1,8 @@
-import { Empty } from 'antd';
 import { useHistory } from 'react-router-dom';
 
 import { ContainerLayout } from './layout';
 import { PaddingContainerLayout } from '@ui/layout';
-import { Text, Label, Button, BigHeading } from '@ui/parts';
+import { Text, Label, Empty, Button, BigHeading } from '@ui/parts';
 
 import { useDetails } from './hooks';
 import { numberFormatter } from './utils';

@@ -6,12 +6,12 @@ import { AppProvider } from '@application/context';
 
 export const curryWrapComponent =
   <ComponentProps,>(Component: ComponentType<ComponentProps>) =>
-    (memoryRouterProps: MemoryRouterProps) =>
-      (componentProps: ComponentProps) =>
-        render(
-          <MemoryRouter {...memoryRouterProps}>
-            <AppProvider>
-              <Component {...componentProps} />
-            </AppProvider>
-          </MemoryRouter>,
-        );
+  (memoryRouterProps: MemoryRouterProps) =>
+  (componentProps: ComponentProps) =>
+    render(
+      <MemoryRouter {...memoryRouterProps}>
+        <AppProvider>
+          <Component {...componentProps} />
+        </AppProvider>
+      </MemoryRouter>,
+    );
