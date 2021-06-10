@@ -1,4 +1,5 @@
 import { useState, FormEvent } from 'react';
+import { Redirect } from 'react-router-dom';
 
 import { PaddingContainerLayout } from '@ui/layout';
 import { SearchInput, CompaniesList } from './parts';
@@ -10,12 +11,12 @@ import { useDebounce } from '@utils/hooks';
 
 export const SearchPreview = ({ addToPortfolio }: SearchPreviewProps): JSX.Element => {
   const [companyName, setCompanyName] = useState('');
-  const debouncedCompanyName = useDebounce(companyName, 300);
+  const debouncedCompanyName = useDebounce(companyName, 500);
 
   const { results: companies, hasError, isLoading } = useCompanies(debouncedCompanyName);
 
   if (hasError) {
-    return <h1>TODO - ERROR PAGE</h1>;
+    return <Redirect to="/404" />;
   }
 
   const onInputChange = (event: FormEvent<HTMLInputElement>): void =>

@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom';
 
+import { Loader } from './parts';
 import { ContainerLayout } from './layout';
 import { PaddingContainerLayout } from '@ui/layout';
 import { Text, Label, Empty, Button, BigHeading } from '@ui/parts';
@@ -17,7 +18,7 @@ export const Details = ({ symbol }: DetailsProps): JSX.Element => {
   const { results, isLoading } = useDetails<CompanyDetails>(symbol);
 
   if (isLoading) {
-    return <h1>Loading</h1>;
+    return <Loader />;
   }
 
   const handleBackClick = (): void => history.goBack();

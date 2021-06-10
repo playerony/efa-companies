@@ -8,12 +8,10 @@ import { Company } from '../../../../types/Company';
 
 const baseColumnsDefinitions = [
   {
-    key: 'name',
     dataIndex: 'name',
     title: 'Company Name',
   },
   {
-    key: 'symbol',
     title: 'Symbol',
     dataIndex: 'symbol',
   },
@@ -26,15 +24,17 @@ export const getColumns = ({ onRemove }: Attributes): TableColumnProps<Company>[
     onRemove(record.symbol);
   };
 
+  const actionsColumnRender = (_: unknown, record: Company) => (
+    <Label strong pointer onClick={handleRemoveClick(record)}>
+      Remove
+    </Label>
+  );
+
   return [
     ...baseColumnsDefinitions,
     {
       title: 'Actions',
-      render: (_, record: Company) => (
-        <Label strong onClick={handleRemoveClick(record)} style={{ cursor: 'pointer' }}>
-          Remove
-        </Label>
-      ),
+      render: actionsColumnRender,
     },
   ];
 };

@@ -5,7 +5,7 @@ export interface Company {
   region: string;
   currency: string;
   timezone: string;
-  marketClose: string;
   marketOpen: string;
   matchScore: string;
+  marketClose: string;
 }
