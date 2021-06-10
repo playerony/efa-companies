@@ -10,6 +10,7 @@ export interface RouteConfig {
 
 export enum Routes {
   DASHBOARD = '/',
+  NOT_FOUND = '/404',
   DETAILS = '/:symbol',
   ANY = '*',
 }
@@ -18,10 +19,13 @@ export const AppRouteConfig: Record<Routes, RouteConfig> = {
   [Routes.DASHBOARD]: {
     component: Pages.DashboardPage,
   },
+  [Routes.NOT_FOUND]: {
+    component: Pages.NotFoundPage,
+  },
   [Routes.DETAILS]: {
     component: Pages.DetailsPage,
   },
   [Routes.ANY]: {
-    component: Pages.DashboardPage,
+    component: Pages.NotFoundPage,
   },
 };

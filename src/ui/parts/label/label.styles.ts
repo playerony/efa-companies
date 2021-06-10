@@ -19,7 +19,13 @@ const StyledLabel = styled.label<StyledLabelProps>`
     css`
       display: contents;
     `}
-    
+
+  ${({ pointer }) =>
+    pointer &&
+    css`
+      cursor: pointer;
+    `}
+  
   ${({ theme }) => respondTo.xmobile`
     font-size: ${theme.fontSize.xsmall};
   `}

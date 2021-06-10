@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import { Table, Label } from '@ui/parts';
 
-import { Company } from '@domain/dashboard/types/Company';
+import { Company } from '@domain/dashboard/types';
 import { PortfolioTableProps } from './portfolio-table.types';
 
 import { getColumns } from './utils';
@@ -26,9 +26,7 @@ export const PortfolioTable = ({ onRemove, companies }: PortfolioTableProps): JS
   return (
     <>
       <Label>Your portfolio</Label>
-      <Table onRow={onRow} columns={columns} dataSource={companies} />
+      <Table onRow={onRow} rowKey="symbol" columns={columns} dataSource={companies} />
     </>
   );
 };
-
-export default PortfolioTable;
