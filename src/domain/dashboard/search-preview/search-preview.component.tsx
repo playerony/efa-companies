@@ -11,6 +11,7 @@ import { useDebounce } from '@utils/hooks';
 
 export const SearchPreview = ({ addToPortfolio }: SearchPreviewProps): JSX.Element => {
   const [companyName, setCompanyName] = useState('');
+
   const debouncedCompanyName = useDebounce(companyName, 500);
 
   const { results: companies, hasError, isLoading } = useCompanies(debouncedCompanyName);
