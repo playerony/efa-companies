@@ -9,8 +9,8 @@ import { useDetails } from './hooks';
 import { numberFormatter } from './utils';
 
 import S from './details.styles';
+import { CompanyDetails } from './types';
 import { DetailsProps } from './details.type';
-import { CompanyDetails } from './types/CompanyDetails';
 
 export const Details = ({ symbol }: DetailsProps): JSX.Element => {
   const history = useHistory();

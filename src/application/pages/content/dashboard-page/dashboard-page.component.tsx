@@ -7,15 +7,20 @@ export const DashboardPage = (): JSX.Element => {
 
   const handleRemove = (symbol: string): void => {
     const copiedPortfolio = portfolio.slice();
-    const filteredArray = copiedPortfolio.filter(
+
+    const portfolioWithoutRecord = copiedPortfolio.filter(
       (_portfolioItem) => _portfolioItem.symbol !== symbol,
     );
 
-    setPortfolio(filteredArray);
+    setPortfolio(portfolioWithoutRecord);
   };
 
   const handleAdd = (company: Company): void => {
-    if (!portfolio.find((_portfolioItem) => _portfolioItem.symbol === company.symbol)) {
+    const hasPortfolioRecord = portfolio.find(
+      (_portfolioItem) => _portfolioItem.symbol === company.symbol,
+    );
+
+    if (!hasPortfolioRecord) {
       setPortfolio([...portfolio, company]);
     }
   };

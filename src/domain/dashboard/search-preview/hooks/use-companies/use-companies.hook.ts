@@ -1,4 +1,4 @@
-import { Company } from '../../../types/Company';
+import { Company } from '../../../types';
 
 import { useGet } from '@utils/hooks';
 import { isObject, removeIndexesFromObjectKeys } from '../../utils';
