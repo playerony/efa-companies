@@ -1,4 +1,4 @@
-import { Label, SearchInputProps, SearchInput as Input } from '@ui/parts';
+import { Label, SearchInputProps, SearchInput as Input } from '@ui';
 
 export const SearchInput = (props: SearchInputProps): JSX.Element => (
   <>

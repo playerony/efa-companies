@@ -1,7 +1,7 @@
 import { MouseEvent } from 'react';
 import { TableColumnProps } from 'antd';
 
-import { Label } from '@ui/parts';
+import { Label } from '@ui';
 
 import { Company } from '../../../../types';
 import { Attributes } from './get-columns.types';

@@ -1,4 +1,4 @@
-import { curryWrapComponent } from '@utils/tests';
+import { curryWrapComponent } from '@utils';
 import { BigHeading } from './big-heading.component';
 
 const wrapComponent = curryWrapComponent(BigHeading)({});

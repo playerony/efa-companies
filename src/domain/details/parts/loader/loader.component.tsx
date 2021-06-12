@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 
-import { LoadingIndicator } from '@ui/parts';
+import { LoadingIndicator } from '@ui';
 
 import S from './loader.styles';
 

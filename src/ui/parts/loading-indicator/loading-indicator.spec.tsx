@@ -1,4 +1,4 @@
-import { curryWrapComponent } from '@utils/tests';
+import { curryWrapComponent } from '@utils';
 import { LoadingIndicator } from './loading-indicator.component';
 
 const wrapComponent = curryWrapComponent(LoadingIndicator)({});

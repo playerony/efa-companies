@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Empty, Label } from '@ui/parts';
+import { Empty, Label } from '@ui';
 import { respondTo } from '@infrastructure/styles/mixins';
 
 const StyledLabel = styled(Label)`

@@ -1,7 +1,7 @@
 import { Company } from '../../../types';
 
-import { useGet } from '@utils/hooks';
-import { isObject, removeIndexesFromObjectKeys } from '../../utils';
+import { useGet, isObject } from '@utils';
+import { removeIndexesFromObjectKeys } from '../../utils';
 
 const makeApiUrl = (companyName: string): string =>
   `/query?function=SYMBOL_SEARCH&keywords=${companyName}&apikey=demo`;

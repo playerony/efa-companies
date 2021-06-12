@@ -1,4 +1,5 @@
 const path = require('path');
+const { fixBabelImports } = require('customize-cra');
 
 module.exports = ({ config }) => {
   config.resolve.modules = [path.resolve(__dirname, '..', 'src'), 'node_modules'];
@@ -11,5 +12,9 @@ module.exports = ({ config }) => {
     '@infrastructure': path.resolve(__dirname, '..', 'src', 'infrastructure'),
   };
 
-  return config;
+  return fixBabelImports('import', {
+    style: 'css',
+    libraryName: 'antd',
+    libraryDirectory: 'es',
+  })(config);
 };

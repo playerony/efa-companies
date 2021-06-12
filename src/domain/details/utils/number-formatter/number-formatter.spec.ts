@@ -1,6 +1,6 @@
 import { numberFormatter } from './number-formatter.function';
 
-import { functionImportTest } from '@utils/tests';
+import { functionImportTest } from '@utils';
 
 describe('numberFormatter Function', () => {
   functionImportTest(numberFormatter);

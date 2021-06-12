@@ -1,4 +1,4 @@
-import { BigHeading } from '@ui/parts';
+import { BigHeading } from '@ui';
 import { CenterBlock } from './layout';
 
 import { ErrorProps } from './error.types';

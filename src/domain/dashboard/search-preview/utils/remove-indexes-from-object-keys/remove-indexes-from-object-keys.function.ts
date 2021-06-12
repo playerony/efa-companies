@@ -1,4 +1,4 @@
-import { isObject } from '..';
+import { isObject } from '@utils';
 
 export const removeIndexesFromObjectKeys = (obj: any) => {
   if (!isObject(obj)) {
