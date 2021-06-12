@@ -1,5 +1,5 @@
 import { Empty } from './empty.component';
-import { curryWrapComponent } from '@utils/tests';
+import { curryWrapComponent } from '@utils';
 
 const wrapComponent = curryWrapComponent(Empty)({});
 

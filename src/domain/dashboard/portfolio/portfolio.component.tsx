@@ -1,4 +1,4 @@
-import { PaddingContainerLayout } from '@ui/layout';
+import { PaddingContainerLayout } from '@ui';
 import { PortfolioTable } from './portfolio-table/portfolio-table.component';
 
 import { PortfolioProps } from './portfolio.types';

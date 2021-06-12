@@ -1,6 +1,6 @@
+import { useLocalStorage } from '@utils';
 import { FlexContainerLayout } from './layout';
 import { Company, Portfolio, SearchPreview } from '@domain/dashboard';
-import { useLocalStorage } from '@utils/hooks';
 
 export const DashboardPage = (): JSX.Element => {
   const [portfolio, setPortfolio] = useLocalStorage<Company[]>('portfolio', []);

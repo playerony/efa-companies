@@ -1,4 +1,4 @@
-import { useGet } from '@utils/hooks';
+import { useGet } from '@utils';
 
 const makeApiUrl = (symbol: string): string =>
   `/query?function=OVERVIEW&symbol=${symbol}&apikey=demo`;

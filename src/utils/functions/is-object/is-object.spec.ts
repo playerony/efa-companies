@@ -1,5 +1,5 @@
+import { functionImportTest } from '@utils';
 import { isObject } from './is-object.function';
-import { functionImportTest } from '@utils/tests';
 
 describe('isObject Function', () => {
   functionImportTest(isObject);

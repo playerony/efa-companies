@@ -1,7 +1,7 @@
 import { useHistory } from 'react-router-dom';
 
 import S from './navbar.styles';
-import { BigHeading } from '@ui/parts';
+import { BigHeading } from '@ui';
 
 export const Navbar = (): JSX.Element => {
   const history = useHistory();

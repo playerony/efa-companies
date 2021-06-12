@@ -1,4 +1,4 @@
-import { functionImportTest } from '@utils/tests';
+import { functionImportTest } from '@utils';
 import { removeIndexesFromObjectKeys } from './remove-indexes-from-object-keys.function';
 
 describe('removeIndexesFromObjectKeys Function', () => {

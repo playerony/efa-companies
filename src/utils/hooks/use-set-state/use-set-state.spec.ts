@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react-hooks';
 
-import { functionImportTest } from '@utils/tests';
+import { functionImportTest } from '@utils';
 import { useSetState } from './use-set-state.hook';
 
 describe('useSetState Hook', () => {

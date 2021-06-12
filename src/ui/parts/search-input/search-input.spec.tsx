@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 
 import { SearchInput } from './search-input.component';
 
-import { curryWrapComponent } from '@utils/tests';
+import { curryWrapComponent } from '@utils';
 
 const wrapComponent = curryWrapComponent(SearchInput)({});
 

@@ -1,5 +1,5 @@
 import { Label } from './label.component';
-import { curryWrapComponent } from '@utils/tests';
+import { curryWrapComponent } from '@utils';
 
 const wrapComponent = curryWrapComponent(Label)({});
 

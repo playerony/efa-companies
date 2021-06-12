@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { tryParseJSON } from '@utils/functions';
+import { tryParseJSON } from '@utils';
 import { storageFactory } from '@infrastructure/persistence';
 
 export function useLocalStorage<T>(key: string, initialValue?: T): [T, (value: T) => void] {

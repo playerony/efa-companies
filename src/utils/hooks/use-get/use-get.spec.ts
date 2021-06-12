@@ -3,7 +3,7 @@ import { renderHook } from '@testing-library/react-hooks';
 
 import { useGet } from './use-get.hook';
 
-import { functionImportTest } from '@utils/tests';
+import { functionImportTest } from '@utils';
 import { axiosInstance } from '@infrastructure/persistence/axios-instance';
 
 const dataMock = [{ record: 'test' }];

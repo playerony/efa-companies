@@ -1,6 +1,6 @@
 import { slice, reverse, compose, find } from 'ramda';
 
-import { isNumber } from '@utils/functions';
+import { isNumber } from '@utils';
 import { Lookup } from './number-formatter.type';
 
 const lookup: Lookup[] = [

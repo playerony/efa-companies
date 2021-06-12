@@ -1,6 +1,6 @@
 import { storageFactory } from './storage-factory.function';
 
-import { functionImportTest } from '@utils/tests';
+import { functionImportTest } from '@utils';
 
 describe('storageFactory Function', () => {
   functionImportTest(storageFactory);

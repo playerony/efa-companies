@@ -4,6 +4,8 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
+// matchMedia
+
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
@@ -17,3 +19,26 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
+
+// localStorage
+
+const localStorageMock = (function () {
+  let store: { [key: string]: any } = {};
+
+  return {
+    getItem(key: string) {
+      return store[key];
+    },
+    setItem(key: string, value: any) {
+      store[key] = value.toString();
+    },
+    clear() {
+      store = {};
+    },
+    removeItem(key: string) {
+      delete store[key];
+    },
+  };
+}());
+
+Object.defineProperty(window, 'localStorage', { value: localStorageMock });

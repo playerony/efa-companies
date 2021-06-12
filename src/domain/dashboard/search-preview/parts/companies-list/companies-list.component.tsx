@@ -1,10 +1,10 @@
 import { CompaniesListRecord } from '..';
-import { List, LoadingIndicator } from '@ui/parts';
+import { List, LoadingIndicator } from '@ui';
 
 import S from './companies-list.styles';
 import { CompaniesListProps } from './companies-list.type';
 
-import { keyForEachElement } from '@utils/functions';
+import { keyForEachElement } from '@utils';
 
 export const CompaniesList = ({
   loading,

@@ -1,5 +1,5 @@
 import { List } from './list.component';
-import { curryWrapComponent } from '@utils/tests';
+import { curryWrapComponent } from '@utils';
 
 const wrapComponent = curryWrapComponent(List)({});
 

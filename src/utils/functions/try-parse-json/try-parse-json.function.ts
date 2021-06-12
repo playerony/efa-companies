@@ -1,12 +1,14 @@
+import { isObject, isString } from '..';
+
 export function tryParseJSON<T = any>(jsonString: string): T | null {
-  if (typeof jsonString != 'string') {
+  if (!isString(jsonString)) {
     return null;
   }
 
   try {
     const result = JSON.parse(jsonString);
 
-    if (result && typeof result == 'object') {
+    if (result && isObject(result)) {
       return result;
     }
   } catch {

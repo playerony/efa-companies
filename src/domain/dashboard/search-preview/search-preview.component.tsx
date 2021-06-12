@@ -1,13 +1,13 @@
 import { useState, FormEvent } from 'react';
 import { Redirect } from 'react-router-dom';
 
-import { PaddingContainerLayout } from '@ui/layout';
+import { PaddingContainerLayout } from '@ui';
 import { SearchInput, CompaniesList } from './parts';
 
 import { SearchPreviewProps } from './search-preview.types';
 
+import { useDebounce } from '@utils';
 import { useCompanies } from './hooks';
-import { useDebounce } from '@utils/hooks';
 
 export const SearchPreview = ({ addToPortfolio }: SearchPreviewProps): JSX.Element => {
   const [companyName, setCompanyName] = useState('');

@@ -2,8 +2,7 @@ import { useHistory } from 'react-router-dom';
 
 import { Loader } from './parts';
 import { ContainerLayout } from './layout';
-import { PaddingContainerLayout } from '@ui/layout';
-import { Text, Label, Empty, Button, BigHeading } from '@ui/parts';
+import { Text, Label, Empty, Button, BigHeading, PaddingContainerLayout } from '@ui';
 
 import { useDetails } from './hooks';
 import { numberFormatter } from './utils';
