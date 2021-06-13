@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import { Table, Label } from '@ui';
 
-import { Company } from '@domain/dashboard/types';
+import { Company } from '@domain/dashboard';
 import { PortfolioTableProps } from './portfolio-table.types';
 
 import { getColumns } from './utils';

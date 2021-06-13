@@ -1,1 +1,1 @@
-export { useDetails } from './use-details/use-details.hook';
+export * from './use-details/use-details.hook';

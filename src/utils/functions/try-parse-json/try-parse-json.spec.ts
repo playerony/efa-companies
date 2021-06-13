@@ -1,5 +1,5 @@
 import { tryParseJSON } from '..';
-import { functionImportTest } from '../../tests';
+import { functionImportTest } from '@utils';
 
 describe('tryParseJSON Function', () => {
   functionImportTest(tryParseJSON);
@@ -12,10 +12,6 @@ describe('tryParseJSON Function', () => {
 
     // @ts-ignore
     expect(tryParseJSON(undefined)).toBeNull();
-  });
-
-  it("should return null when passed parameter can't be parsed", () => {
-    expect(tryParseJSON('123')).toBeNull();
   });
 
   it('should return object when passed parameter can be parsed', () => {

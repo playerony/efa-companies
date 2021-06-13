@@ -2,8 +2,7 @@ import styled from 'styled-components';
 import { PlusOutlined } from '@ant-design/icons';
 
 import { ListItem } from '@ui';
-
-import { respondTo } from '@infrastructure/styles/mixins';
+import { respondTo } from '@infrastructure';
 
 const StyledAddIcon = styled(PlusOutlined)`
   cursor: pointer;

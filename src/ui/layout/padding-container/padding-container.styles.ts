@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { respondTo } from '@infrastructure/styles/mixins';
+import { respondTo } from '@infrastructure';
 
 const StyledPaddingContainer = styled.div`
   width: 100%;

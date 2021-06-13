@@ -1,4 +1,4 @@
-import { Company } from '../../../types';
+import { Company } from '@domain/dashboard';
 
 export interface CompaniesListRecordProps {
   company: Company;

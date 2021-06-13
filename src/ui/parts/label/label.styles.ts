@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { respondTo } from '@infrastructure';
 import { StyledLabelProps } from './label.types';
-import { respondTo } from '@infrastructure/styles/mixins';
 
 const StyledLabel = styled.label<StyledLabelProps>`
   margin: 0;

@@ -16,7 +16,9 @@ export const DashboardPage = (): JSX.Element => {
   };
 
   const handleAdd = (company: Company): void => {
-    const hasPortfolioRecord = portfolio.find(
+    console.log(portfolio);
+
+    const hasPortfolioRecord = portfolio?.find(
       (_portfolioItem) => _portfolioItem.symbol === company.symbol,
     );
 

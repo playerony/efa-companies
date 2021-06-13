@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { Empty, Label } from '@ui';
-import { respondTo } from '@infrastructure/styles/mixins';
+import { respondTo } from '@infrastructure';
 
 const StyledLabel = styled(Label)`
   padding-top: ${({ theme }) => theme.spacing.medium};

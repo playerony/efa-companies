@@ -1,4 +1,3 @@
-export { Portfolio } from './portfolio/portfolio.component';
-export { SearchPreview } from './search-preview/search-preview.component';
-
-export type { Company } from './types';
+export * from './types';
+export * from './portfolio/portfolio.component';
+export * from './search-preview/search-preview.component';

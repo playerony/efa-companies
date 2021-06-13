@@ -1,1 +1,1 @@
-export { numberFormatter } from './number-formatter/number-formatter.function';
+export * from './number-formatter/number-formatter.function';

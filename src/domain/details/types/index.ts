@@ -1,1 +1,1 @@
-export type { CompanyDetails } from './CompanyDetails';
+export * from './CompanyDetails';
