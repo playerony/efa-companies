@@ -1,7 +1,6 @@
 import { storiesOf } from '@storybook/react';
 
-import { List } from './list.component';
-import { ListItem } from '../list-item/list-item.component';
+import { List, ListItem } from '@ui';
 
 storiesOf('Design System/ui/List', module).add('default', () => (
   <List>

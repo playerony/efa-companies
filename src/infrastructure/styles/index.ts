@@ -1,4 +1,4 @@
-export { theme } from './theme';
-export * as mixins from './mixins';
-export { ResetStyles } from './reset.styles';
-export { GlobalStyles } from './global.styles';
+export * from './mixins';
+export * from './theme';
+export * from './reset.styles';
+export * from './global.styles';

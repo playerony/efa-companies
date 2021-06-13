@@ -1,1 +1,1 @@
-export { ContainerLayout } from './container/container.layout';
+export * from './container/container.layout';

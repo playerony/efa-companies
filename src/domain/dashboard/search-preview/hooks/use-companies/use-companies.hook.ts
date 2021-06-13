@@ -1,4 +1,4 @@
-import { Company } from '../../../types';
+import { Company } from '@domain/dashboard';
 
 import { useGet, isObject } from '@utils';
 import { removeIndexesFromObjectKeys } from '../../utils';

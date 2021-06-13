@@ -3,7 +3,7 @@ import { TableColumnProps } from 'antd';
 
 import { Label } from '@ui';
 
-import { Company } from '../../../../types';
+import { Company } from '@domain/dashboard';
 import { Attributes } from './get-columns.types';
 
 const baseColumnsDefinitions = [

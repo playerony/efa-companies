@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 
-import { Navbar } from '@domain/navbar/navbar.component';
+import { Navbar } from '@domain/navbar';
 
 import { AppProvider } from '../context';
 import { PlainBackground } from '../layout';

@@ -1,10 +1,8 @@
 import MockAdapter from 'axios-mock-adapter';
 import { renderHook } from '@testing-library/react-hooks';
 
-import { useGet } from './use-get.hook';
-
-import { functionImportTest } from '@utils';
-import { axiosInstance } from '@infrastructure/persistence/axios-instance';
+import { axiosInstance } from '@infrastructure';
+import { useGet, functionImportTest } from '@utils';
 
 const dataMock = [{ record: 'test' }];
 

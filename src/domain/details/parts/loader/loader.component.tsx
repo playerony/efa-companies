@@ -1,8 +1,7 @@
 import { FunctionComponent } from 'react';
 
-import { LoadingIndicator } from '@ui';
-
 import S from './loader.styles';
+import { LoadingIndicator } from '@ui';
 
 export const Loader: FunctionComponent = () => (
   <LoadingIndicator spinning>

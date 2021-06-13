@@ -1,1 +1,1 @@
-export { useCompanies } from './use-companies/use-companies.hook';
+export * from './use-companies/use-companies.hook';

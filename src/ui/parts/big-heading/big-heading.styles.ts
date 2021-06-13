@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { respondTo } from '@infrastructure/styles/mixins';
+import { respondTo } from '@infrastructure';
 import { StyledBigHeadingProps } from './big-heading.types';
 
 const StyledBigHeading = styled.h1<StyledBigHeadingProps>`

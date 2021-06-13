@@ -1,4 +1,4 @@
-import { isObject, isString } from '..';
+import { isString } from '..';
 
 export function tryParseJSON<T = any>(jsonString: string): T | null {
   if (!isString(jsonString)) {
@@ -8,7 +8,7 @@ export function tryParseJSON<T = any>(jsonString: string): T | null {
   try {
     const result = JSON.parse(jsonString);
 
-    if (result && isObject(result)) {
+    if (result) {
       return result;
     }
   } catch {

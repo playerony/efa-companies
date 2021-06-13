@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { AxiosResponse } from 'axios';
 
 import { State } from './use-get.types';
-import { axiosInstance } from '@infrastructure/persistence/axios-instance';
 
-import { useSetState } from '..';
+import { useSetState } from '@utils';
+import { axiosInstance } from '@infrastructure';
 
 export const useGet = <ResultsType>(url: string = ''): State<ResultsType> => {
   const [state, setState] = useSetState<State<ResultsType>>({

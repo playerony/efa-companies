@@ -1,1 +1,1 @@
-export { getColumns } from './get-columns/get-columns.function';
+export * from './get-columns/get-columns.function';
