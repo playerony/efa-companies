@@ -1,2 +1,2 @@
-export { axiosConfig, axiosInstance } from './axios-instance';
-export { storageFactory } from './storage-factory/storage-factory.function';
+export * from './axios-instance';
+export * from './storage-factory/storage-factory.function';

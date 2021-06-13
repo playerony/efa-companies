@@ -1,1 +1,1 @@
-export { FlexContainerLayout } from './flex-container/flex-container.layout';
+export * from './flex-container/flex-container.layout';

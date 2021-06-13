@@ -1,1 +1,1 @@
-export { PaddingContainerLayout } from './padding-container/padding-container.layout';
+export * from './padding-container/padding-container.layout';

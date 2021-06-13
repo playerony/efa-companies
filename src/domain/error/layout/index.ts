@@ -1,1 +1,1 @@
-export { CenterBlock } from './center-block/center-block.layout';
+export * from './center-block/center-block.layout';

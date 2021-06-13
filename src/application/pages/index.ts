@@ -1,2 +1,2 @@
-export { NotFoundPage } from './error';
-export { DetailsPage, DashboardPage } from './content';
+export * from './error';
+export * from './content';
