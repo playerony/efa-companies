@@ -24,8 +24,7 @@
       "files": [
         "*.tsx",
         "*.ts",
-        "*.js",
-        "*.mdx"
+        "*.js"
       ],
       "rules": {
         "eqeqeq": "off",
