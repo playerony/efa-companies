@@ -1,8 +1,10 @@
 import axios, { AxiosRequestConfig } from 'axios';
 
+const baseURL = process.env.REACT_APP_BASE_API_URL || '';
+
 export const axiosConfig: AxiosRequestConfig = {
+  baseURL,
   timeout: 15000,
-  baseURL: 'https://www.alphavantage.co',
   timeoutErrorMessage: 'Request timeout.',
   headers: {
     'Content-Type': 'application/json;charset=utf-8',

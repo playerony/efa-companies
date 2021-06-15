@@ -3,8 +3,10 @@ import { Company } from '@domain/dashboard';
 import { useGet, isObject } from '@utils';
 import { removeIndexesFromObjectKeys } from '../../utils';
 
+const apiKey = process.env.REACT_APP_API_KEY || 'demo';
+
 const makeApiUrl = (companyName: string): string =>
-  `/query?function=SYMBOL_SEARCH&keywords=${companyName}&apikey=demo`;
+  `/query?function=SYMBOL_SEARCH&keywords=${companyName}&apikey=${apiKey}`;
 
 const formatResult = (results: any): Company[] | null => {
   if (!isObject(results)) {
