@@ -1,0 +1,18 @@
+import { boolean } from '@storybook/addon-knobs';
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+import { Empty, LoadingIndicator } from '@ui';
+
+<Meta title="Design System/ui/LoadingIndicator" component={LoadingIndicator} />
+
+# LoadingIndicator
+
+LoadingIndicator is used to wrap any component with loader.
+
+<Preview withToolbar>
+  <Story name="default">
+    <LoadingIndicator spinning={boolean('Spinning', true)}>
+      <Empty />
+    </LoadingIndicator>
+  </Story>
+</Preview>
