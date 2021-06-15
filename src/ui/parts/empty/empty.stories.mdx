@@ -1,0 +1,26 @@
+import { Empty as AntdEmpty } from 'antd';
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+import { Empty } from '@ui';
+
+<Meta title="Design System/ui/Empty" component={Empty} />
+
+# Empty
+
+Empty is used to display information if there is not data or something is empty.
+
+<Preview withToolbar>
+  <Story name="default">
+    <Empty />
+  </Story>
+</Preview>
+
+# Empty with custom icon and information
+
+Empty allow to add a custom icon and information.
+
+<Preview withToolbar>
+  <Story name="custom">
+    <Empty description="custom description" image={AntdEmpty.PRESENTED_IMAGE_DEFAULT} />
+  </Story>
+</Preview>

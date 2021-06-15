@@ -1,0 +1,19 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+import { List, ListItem } from '@ui';
+
+<Meta title="Design System/ui/List" component={List} />
+
+# List
+
+List is used to display data in a readability way in form of rows.
+
+<Preview withToolbar>
+  <Story name="default">
+    <List>
+      <ListItem>first list item</ListItem>
+      <ListItem>second list item</ListItem>
+      <ListItem>third list item</ListItem>
+    </List>
+  </Story>
+</Preview>
