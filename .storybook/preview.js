@@ -1,3 +1,4 @@
+import { MemoryRouter } from 'react-router-dom';
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
 import { AppProvider } from '@application/context';
@@ -18,13 +19,15 @@ addParameters({
 });
 
 addDecorator((Story) => (
-  <AppProvider>
-    <Story />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Raleway:400,500,700&display=swap"
-      rel="stylesheet"
-    ></link>
-  </AppProvider>
+  <MemoryRouter initialEntries={['/']}>
+    <AppProvider>
+      <Story />
+      <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Raleway:400,500,700&display=swap"
+        rel="stylesheet"
+      ></link>
+    </AppProvider>
+  </MemoryRouter>
 ));
 
 addDecorator(withA11y);

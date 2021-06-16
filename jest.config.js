@@ -7,7 +7,7 @@ module.exports = {
   },
   roots: ['<rootDir>/src'],
   testMatch: ['**/__tests__/**/*.+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'],
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/infrastructure/tests/setup-tests.ts'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
