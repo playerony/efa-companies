@@ -4,7 +4,7 @@ import { tryParseJSON } from '@utils';
 import { storageFactory } from '@infrastructure';
 
 export function useLocalStorage<T>(key: string, initialValue?: T): [T, (value: T) => void] {
-  const localStorageFactory = storageFactory(() => window.localStorage);
+  const localStorageFactory = storageFactory(() => localStorage);
 
   const [storedValue, setStoredValue] = useState(getInitialStoredValue);
 
