@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getColumns Function should return an array which represents each table column 1`] = `
+Array [
+  Object {
+    "dataIndex": "name",
+    "title": "Company Name",
+  },
+  Object {
+    "dataIndex": "symbol",
+    "title": "Symbol",
+  },
+  Object {
+    "render": [Function],
+    "title": "Actions",
+  },
+]
+`;
