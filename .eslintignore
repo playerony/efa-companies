@@ -2,5 +2,6 @@
 *.svg
 *.css
 *.json
+*.ts.snap
 /storybook-static
 src/process-env.d.ts
