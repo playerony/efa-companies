@@ -1,0 +1,37 @@
+{
+  "bestMatches": [
+    {
+      "1. symbol": "BA",
+      "2. name": "Boeing Company",
+      "3. type": "Equity",
+      "4. region": "United States",
+      "5. marketOpen": "09:30",
+      "6. marketClose": "16:00",
+      "7. timezone": "UTC-04",
+      "8. currency": "USD",
+      "9. matchScore": "1.0000"
+    },
+    {
+      "1. symbol": "BAA",
+      "2. name": "Banro Corporation USA",
+      "3. type": "Equity",
+      "4. region": "United States",
+      "5. marketOpen": "09:30",
+      "6. marketClose": "16:00",
+      "7. timezone": "UTC-04",
+      "8. currency": "USD",
+      "9. matchScore": "0.8000"
+    },
+    {
+      "1. symbol": "BAB",
+      "2. name": "Invesco Taxable Municipal Bond ETF",
+      "3. type": "ETF",
+      "4. region": "United States",
+      "5. marketOpen": "09:30",
+      "6. marketClose": "16:00",
+      "7. timezone": "UTC-04",
+      "8. currency": "USD",
+      "9. matchScore": "0.8000"
+    }
+  ]
+}
