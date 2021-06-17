@@ -16,17 +16,15 @@ describe('details', () => {
     cy.url().should('eq', 'http://localhost:3000/BA');
   });
 
-  it('should display proper information about company', () => {
-    cy.get('[data-test-id=company-details]').get('h1').contains('The Boeing Company');
+  it('should display proper information about selected company', () => {
+    cy.get('[data-test-id=company-details] h1').contains('The Boeing Company');
 
-    cy.get('[data-test-id=company-details]')
-      .get('[data-test-id=address]')
-      .contains('Address: 100 North Riverside Plaza, Chicago');
+    cy.get('[data-test-id=address]').contains('Address: 100 North Riverside Plaza, Chicago');
 
-    cy.get('[data-test-id=company-details]')
-      .get('[data-test-id=market-capitalization]')
-      .contains('Market Capitalization: 141.68 billion');
+    cy.get('[data-test-id=market-capitalization]').contains(
+      'Market Capitalization: 141.68 billion',
+    );
 
-    cy.get('[data-test-id=company-details]').get('p').contains('The Boeing Company Description');
+    cy.get('[data-test-id=company-details] p').contains('The Boeing Company Description');
   });
 });
