@@ -25,7 +25,7 @@ export const Details = ({ symbol }: DetailsProps): JSX.Element => {
   const noData = !results?.Name;
 
   return (
-    <PaddingContainerLayout>
+    <PaddingContainerLayout data-test-id="company-details">
       <ContainerLayout>
         <Button onClick={handleBackClick}>Go Back</Button>
         {noData ? (
@@ -34,13 +34,13 @@ export const Details = ({ symbol }: DetailsProps): JSX.Element => {
           <>
             <S.StyledTextWrapper>
               <BigHeading>{results?.Name}</BigHeading>
-              <Label>
+              <Label data-test-id="address">
                 <Label strong sameLine>
                   Address:{' '}
                 </Label>
                 {results?.Address}
               </Label>
-              <Label>
+              <Label data-test-id="market-capitalization">
                 <Label strong sameLine>
                   Market Capitalization:{' '}
                 </Label>
