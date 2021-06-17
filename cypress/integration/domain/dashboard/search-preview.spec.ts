@@ -1,4 +1,4 @@
-describe('search-companies', () => {
+describe('search-preview', () => {
   beforeEach(() => {
     cy.intercept('**/query?function=SYMBOL_SEARCH&keywords=BA*', {
       fixture: 'companies/ba.mock.json',
@@ -8,7 +8,7 @@ describe('search-companies', () => {
       fixture: 'companies/tesco.mock.json',
     }).as('get-companies-tesco');
 
-    cy.viewport('macbook-15');
+    cy.viewport('macbook-16');
     cy.visit('/');
   });
 
