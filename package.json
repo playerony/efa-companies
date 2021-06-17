@@ -28,7 +28,7 @@
     "reinstall-deps": "bash ./scripts/reinstall-deps.sh",
     "check": "npm run lint && npm run typecheck && npm run test",
     "format": "prettier --write \"src/**/*\" && npm run lint:fix",
-    "test:e2e": "npx cypress run --spec './cypress/integration/**/*.spec.*'",
+    "test:e2e": "npx cypress run --port 4000 --spec './cypress/integration/**/*.spec.*'",
     "test": "NODE_ENV=test jest --config ./jest.config.js --env=jest-environment-jsdom-sixteen",
     "test:watch": "NODE_ENV=test jest --config ./jest.config.js --watch --env=jest-environment-jsdom-sixteen",
     "test:coverage": "NODE_ENV=test jest --config ./jest.config.js --coverage --env=jest-environment-jsdom-sixteen",
